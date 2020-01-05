@@ -8,13 +8,6 @@
     <artifactId>division-mapping</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <repositories>
-        <repository>
-            <id>division</id>
-            <url>https://raw.github.com/dnc-soft/division-utils/repository</url>
-        </repository>
-    </repositories>
-
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
         <dependency>
@@ -26,7 +19,7 @@
         <dependency>
             <groupId>division</groupId>
             <artifactId>division-utils</artifactId>
-            <version>0.1</version>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
