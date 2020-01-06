@@ -62,14 +62,10 @@ public class AnnotationReader {
   
   public static List<Field> getFields(Class clazz) {
     List<Field> fields = new ArrayList<>();
-    try {
+    fields.addAll(Arrays.asList(clazz.getDeclaredFields()));
+    while(clazz != MappingObjectImpl.class) {
+      clazz = clazz.getSuperclass();
       fields.addAll(Arrays.asList(clazz.getDeclaredFields()));
-      while(clazz != MappingObjectImpl.class) {
-        clazz = clazz.getSuperclass();
-        fields.addAll(Arrays.asList(clazz.getDeclaredFields()));
-      }
-    }catch (NullPointerException ex) {
-      System.out.println(clazz.getName());
     }
     return fields;
   }
