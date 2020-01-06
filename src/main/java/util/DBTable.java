@@ -28,11 +28,7 @@ public class DBTable extends Element {
     
     this.annotatedClass  = realClass;
     this.interfacesClass = interfacesClass;
-    
-    if(interfacesClass.getSimpleName().equals("Comment")) {
-      System.out.println("sgdf");
-    }
-    
+
     this.columns      = AnnotationReader.getColumns(realClass);
     this.queryColumns = AnnotationReader.getQyeryColumns(realClass);
     this.relations    = AnnotationReader.getRelations(realClass);

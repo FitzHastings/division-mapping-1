@@ -28,10 +28,17 @@
             <artifactId>division-utils</artifactId>
             <version>0.1</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
             <version>5.1.5.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.8.jre7</version>
         </dependency>
 
     </dependencies>
@@ -47,7 +54,7 @@
                 </configuration>
             </plugin>
 
-            <!--<plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-install-plugin</artifactId>
                 <version>3.0.0-M1</version>
@@ -61,12 +68,12 @@
                             <file>target/division-mapping-1.0-SNAPSHOT.jar</file>
                             <groupId>division</groupId>
                             <artifactId>division-mapping</artifactId>
-                            <version>1.0</version>
+                            <version>0.1</version>
                             <packaging>jar</packaging>
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>-->
+            </plugin>
         </plugins>
     </build>
 

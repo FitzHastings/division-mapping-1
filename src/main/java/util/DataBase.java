@@ -28,7 +28,7 @@ public class DataBase {
     try {
       if(properties == null) {
         properties = new Properties();
-        P.list("types", Map.class).stream().forEach(t -> {
+        P.List("types", Map.class).stream().forEach(t -> {
           properties.put(t.get("name"), t.get("value"));
         });
       }
