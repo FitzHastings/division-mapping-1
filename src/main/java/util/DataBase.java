@@ -70,6 +70,8 @@ public class DataBase {
   }
   
   public static void put(Class realClass, Class interfaceClass) {
+    if(realClass == null || interfaceClass == null)
+      System.out.println("################# "+realClass+" "+interfaceClass);
     if(!tables.containsKey(interfaceClass)) {
       tables.put(interfaceClass, new DBTable(realClass, interfaceClass));
       classes.put(realClass, interfaceClass);
